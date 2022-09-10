@@ -30,17 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.s1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.s1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.s2 = new System.Windows.Forms.Panel();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.s1.SuspendLayout();
             this.s2.SuspendLayout();
@@ -57,6 +58,26 @@
             this.panel1.Size = new System.Drawing.Size(31, 450);
             this.panel1.TabIndex = 0;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(0, 80);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(28, 76);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "S";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 71);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "HIDE";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // s1
             // 
             this.s1.BackColor = System.Drawing.Color.Red;
@@ -68,19 +89,18 @@
             this.s1.Size = new System.Drawing.Size(96, 330);
             this.s1.TabIndex = 1;
             // 
-            // timer1
+            // comboBox3
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 71);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "HIDE";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.comboBox3.Location = new System.Drawing.Point(3, 3);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(93, 21);
+            this.comboBox3.TabIndex = 2;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -111,17 +131,9 @@
             this.comboBox2.Size = new System.Drawing.Size(90, 21);
             this.comboBox2.TabIndex = 1;
             // 
-            // comboBox3
+            // timer1
             // 
-            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.comboBox3.Location = new System.Drawing.Point(3, 3);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(93, 21);
-            this.comboBox3.TabIndex = 2;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // s2
             // 
@@ -134,20 +146,6 @@
             this.s2.Size = new System.Drawing.Size(100, 450);
             this.s2.TabIndex = 3;
             // 
-            // timer2
-            // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(0, 80);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(28, 76);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "S";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(6, 20);
@@ -158,15 +156,30 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // timer3
             // 
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(167, 98);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.s2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
@@ -193,6 +206,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Button button4;
     }
 }
 

@@ -119,6 +119,17 @@ namespace Sliding
 
             }
         }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //if(comboBox1.Items)
+        }
+
         //Network
         public bool pingStateus()
         {
