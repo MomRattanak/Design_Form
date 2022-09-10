@@ -28,5 +28,23 @@ namespace Design_Form
         {
 
         }
+
+        private void materialSlider1_Click(object sender, EventArgs e)
+        {
+            if (materialSlider1.Value == 1)
+            {
+                MessageBox.Show("Hi");
+            }
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 a1 = new Form2();
+            a1.ShowDialog();
+
+        }
     }
 }
+    
+
