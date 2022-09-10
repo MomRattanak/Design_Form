@@ -6,8 +6,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows.Forms;//S,I,N
+using System.Net.NetworkInformation;//For Network test
 
+//Sliding In/Out
+//Network Test
 namespace Sliding
 {
     public partial class Form1 : Form
@@ -22,6 +25,7 @@ namespace Sliding
             PW2 = s2.Width;
             Hided = false;
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -75,7 +79,6 @@ namespace Sliding
                     timer2.Stop();
                     Hided = false;
                     this.Refresh();
-
                 }
             }
             else
@@ -89,12 +92,57 @@ namespace Sliding
                 }
             }
         }
-
+        //Network
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (pingStateus() == true)
+            {
+                MessageBox.Show("Connected to the Network");
+            }
+            else
+            {
+                MessageBox.Show("Please Connect to the Network");
+            }
+        }
+        //
         private void button2_Click(object sender, EventArgs e)
         {
             if (Hided) button2.Text = "H";
             else button2.Text = "S";
             timer2.Start();
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            if (pingStateus() == true)
+            {
+
+            }
+        }
+        //Network
+        public bool pingStateus()
+        {
+            bool pingStateus = false;
+            string hostNameorAddress = "Google.com";
+
+            using (Ping p = new Ping())
+            {
+                string data = "";
+                byte[] buffrer = Encoding.ASCII.GetBytes(data);
+                int timeout = 1000;
+
+                try
+                {
+                    PingReply reply = p.Send(hostNameorAddress, timeout, buffrer);
+                    pingStateus = (reply.Status == IPStatus.Success);
+                }
+                catch (Exception)
+                {
+
+                    pingStateus = false;
+                }
+                return pingStateus;
+            }
         }
     }
 }
